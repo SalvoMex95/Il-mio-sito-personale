@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Demo</title>
+</head>
+<body>
+  <input type="number"/> 
+  <button onclick="stampa()"> Stampa </button>
+  <div>
+
+
+  </div>
+
+  <script>
+function stampa() {
+// prendi il valore che è contenuto nel nostro input
+let numero= document.querySelector("input").value;
+// per ogni numero inferiore a quel valore
+let contenitore= document.querySelector("div"); //riferimento al tag DIV
+contenitore.innerHTML=""; //svuoto il contenitore del div
+
+if (numero<1) {
+    contenitore.innerHTML="Il numero deve essere maggiore di 0";
+    
+}
+else {
+for (let i=0; i<numero; i++) {
+    contenitore.innerHTML+=`Sto stampando l/'elemento numero ` + i + `<br>`; //aggiungo un paragrafo con il numero
+    // stampa il numero
+}
+    }
+}
+  </script>
+</body>
+</html>
